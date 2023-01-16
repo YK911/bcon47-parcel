@@ -1,3 +1,6 @@
-@import './common';
-@import './components/example';
+@import './components/common';
 @import './components/header';
+
+@import './components/modal/module';
+@import './components/forms/contact-form';
+@import './components/spinner';

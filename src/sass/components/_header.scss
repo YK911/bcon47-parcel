@@ -1,7 +1,42 @@
 .header {
-  padding: 30px;
-  text-align: center;
-  background-color: teal;
-  color: white;
+  padding: 28px 0;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 1280px) {
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  margin-left: 80px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @media screen and (min-width: 1280px) {
+    gap: 48px;
+  }
+}
+
+.nav-link {
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+}
+
+.header-btn {
+  margin-left: auto;
 }

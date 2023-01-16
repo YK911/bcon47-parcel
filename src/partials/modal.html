@@ -1,0 +1,62 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal-close-btn" data-modal-close>
+      <img
+        src="images/icons-cross.svg"
+        alt="close icon"
+        width="24"
+        height="24"
+      />
+    </button>
+    <div class="modal-wrapper">
+      <p class="modal-title"><strong>Contact us</strong></p>
+      <p class="modal-desc">
+        If you have any additional questions or you want to clarify something
+        before you make an order please fill in your contact details. We will
+        call you back.
+      </p>
+
+      <form class="contact-form" name="contact-form">
+        <label class="contact-form-label" for="user_name">Name</label>
+        <input
+          class="contact-form-field"
+          type="text"
+          name="user_name"
+          id="user_name"
+        />
+        <label class="contact-form-label" for="">Email</label>
+        <input
+          class="contact-form-field"
+          type="email"
+          name="user_email"
+          id="user_email"
+        />
+        <button class="modal-btn" type="submit" data-action="send">Send</button>
+      </form>
+    </div>
+    <div class="modal-gratitude visually-hidden">
+      <img
+        class="modal-gratitude-img"
+        src="images/thanks.svg"
+        alt="thanks"
+        width="367"
+        height="202"
+      />
+      <p class="modal-gratitude-title"><strong>Thank you!</strong></p>
+      <p class="modal-gratitude-desc">
+        We have received your contact details and will reach you soon.
+      </p>
+      <button class="modal-btn" type="submit" data-modal-close>Continue</button>
+    </div>
+    <svg class="spinner visually-hidden" viewBox="0 0 50 50">
+      <circle
+        class="path"
+        cx="25"
+        cy="25"
+        r="20"
+        fill="none"
+        stroke-width="5"
+      ></circle>
+    </svg>
+  </div>
+</div>
