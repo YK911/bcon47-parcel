@@ -76,4 +76,10 @@
 
   background: #e86f54;
   border-radius: 8px;
+
+  transition: 300ms;
+
+  &:disabled {
+    background: rgba(232, 111, 84, 0.4);
+  }
 }

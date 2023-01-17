@@ -1,5 +1,5 @@
 const refs = {
-  openModalBtn: document.querySelector('[data-modal-open]'),
+  openModalBtns: document.querySelectorAll('[data-modal-open]'),
   closeModalBtns: document.querySelectorAll('[data-modal-close]'),
   sendModalBtn: document.querySelector('[data-action="send"'),
   modal: document.querySelector('[data-modal]'),
@@ -8,7 +8,10 @@ const refs = {
   spinnerEl: document.querySelector('.spinner'),
 };
 
-refs.openModalBtn.addEventListener('click', toggleModal);
+refs.openModalBtns.forEach(openBtn => {
+  openBtn.addEventListener('click', toggleModal);
+}); // add function to select all buttons that open modal window
+
 refs.closeModalBtns.forEach(closeBtn => {
   closeBtn.addEventListener('click', toggleModal);
 });
@@ -22,7 +25,7 @@ function toggleModal(event) {
     setTimeout(() => {
       refs.gratitudePopup.classList.remove('visually-hidden');
       refs.spinnerEl.classList.add('visually-hidden');
-    }, 3000);
+    }, 3000); // set time to toogle popup view
   } else {
     refs.modal.classList.toggle('is-hidden');
     setTimeout(() => {
